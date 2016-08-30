@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Cool and eclectic version manager for any language",
   "scripts": {
-    "preinstall": "curl -s https://raw.githubusercontent.com/markelog/ec-install/master/install.sh | EC_DEST=$(npm bin -g) sh",
+    "preinstall": "curl -s https://raw.githubusercontent.com/markelog/ec-install/master/install.sh | EC_DEST=$(npm bin -g) sh"
   },
   "preferGlobal": true,
   "repository": {
