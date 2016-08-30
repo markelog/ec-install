@@ -1,0 +1,38 @@
+{
+  "name": "eclectica",
+  "version": "0.0.1",
+  "description": "Cool and eclectic version manager for any language",
+  "scripts": {
+    "preinstall": "curl -s https://raw.githubusercontent.com/markelog/ec-install/master/install.sh | EC_DEST=$(npm bin -g) sh",
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markelog/eclectica.git"
+  },
+  "keywords": [
+    "eclectic",
+    "eclectica",
+    "ruby",
+    "golang",
+    "go",
+    "rust",
+    "rustc",
+    "node",
+    "nodejs",
+    "version manager",
+    "version",
+    "manager",
+    "switcher",
+    "binary",
+    "env",
+    "environment"
+  ],
+  "files": [],
+  "author": "Oleg Gaidarenko <markelog@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markelog/eclectica/issues"
+  },
+  "homepage": "https://github.com/markelog/eclectica#readme"
+}
