@@ -28,9 +28,11 @@ elif [ "$UNAME" = "Linux" ] ; then
   fi
 fi
 
-
-LATEST=$(curl -s https://api.github.com/repos/markelog/eclectica/tags | grep -Eo '"name":.*?[^\\]",'  | head -n 1 | sed 's/[," ]//g' | cut -d ':' -f 2)
-URL="https://github.com/markelog/eclectica/releases/download/$LATEST/eclectica_$PLATFORM"
+if [ -n "${EC_VERSION+set}" ] ; then
+  VERSION=v$EC_VERSION
+else
+  VERSION=$(curl -s https://api.github.com/repos/markelog/eclectica/tags | grep -Eo '"name":.*?[^\\]",'  | head -n 1 | sed 's/[," ]//g' | cut -d ':' -f 2)
+fi
 
 if [ -n "${EC_DEST+set}" ] ; then
   DEST=$EC_DEST
@@ -39,12 +41,13 @@ else
 fi
 
 DEST="$DEST/ec"
+URL="https://github.com/markelog/eclectica/releases/download/$VERSION/eclectica_$PLATFORM"
 
-if [ -z $LATEST ] ; then
+if [ -z $VERSION ] ; then
   echo "Error requesting. Download binary from https://github.com/markelog/eclectica/releases"
   exit 1
 else
-  curl -L https://github.com/markelog/eclectica/releases/download/$LATEST/ec_$PLATFORM -o $DEST
+  curl -L https://github.com/markelog/eclectica/releases/download/$VERSION/ec_$PLATFORM -o $DEST
   chmod +x $DEST
 fi
 
