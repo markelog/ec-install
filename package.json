@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "Cool and eclectic version manager for any language",
   "scripts": {
-    "preinstall": "curl -s https://raw.githubusercontent.com/markelog/ec-install/master/install.sh | EC_DEST=$(npm bin -g) sh"
+    "postinstall": "EC_DEST=$(npm bin -g) EC_VERSION=0.0.1 sh ./install.sh"
+  },
+  "bin": {
+    "ec": "./bin/ec"
   },
   "preferGlobal": true,
   "repository": {
@@ -28,7 +31,7 @@
     "env",
     "environment"
   ],
-  "files": [],
+  "files": ["install.sh", "bin"],
   "author": "Oleg Gaidarenko <markelog@gmail.com>",
   "license": "MIT",
   "bugs": {
