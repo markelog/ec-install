@@ -21,7 +21,7 @@ pid = fork do
 
 	# Replace dummy bin with a real one
 	# "sleep" is need to give time for parent process to finish up
-	exec("sleep 1 && mv #{temp}/ec #{bin}")
+	exec("sleep 2 && mv #{temp}/ec #{bin}")
 end
 
 # Do it zombie style
