@@ -9,7 +9,7 @@ temp = Dir.tmpdir()
 
 # Place real binary in tmp path,
 # if we put to bin path immediately, install process will try to use a dummy one
-`EC_DEST=#{temp} EC_VERSION=0.0.1 sh install.sh`
+`EC_DEST=#{temp} EC_VERSION=0.0.2 sh install.sh`
 
 # Execute in subprocess so post install would think we are finished
 pid = fork do
