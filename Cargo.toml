@@ -1,0 +1,21 @@
+[package]
+name = "eclectica"
+license = "MIT"
+version = "0.0.2"
+authors = ["Oleg Gaidarenko <markelog@gmail.com>"]
+repository = "https://github.com/markelog/eclectica"
+homepage = "https://github.com/markelog/eclectica#readme"
+documentation = "https://github.com/markelog/eclectica#readme"
+description = "Cool and eclectic version manager for any language (ruby, rust, node.js, golang)"
+build = "build.rs"
+include = ["install.sh", "build.rs", "Cargo.toml", "for-rust.sh", "src/*.rs"]
+keywords = [
+  "eclectica",
+  "version",
+  "manager",
+  "binary",
+  "environment"
+]
+
+[[bin]]
+name = "ec"
