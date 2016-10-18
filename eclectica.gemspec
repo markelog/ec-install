@@ -1,14 +1,14 @@
 Gem::Specification.new do |s|
   s.name        = "eclectica"
-  s.version     = "0.0.2"
+  s.version     = "0.0.6"
   s.licenses    = "MIT"
   s.author      = "Oleg Gaidarenko"
   s.email       = "markelog@gmail.com"
   s.homepage    = "https://github.com/markelog/eclectica#readme"
-  s.summary     = "Cool and eclectic version manager for any language"
-  s.description = "Cool and eclectic version manager for any language (ruby, rust, node.js, golang)"
+  s.summary     = "Version manager for any language"
+  s.description = "Cool and eclectic version manager for any language"
 
   s.extensions  = "extconf.rb"
-  s.executables = "ec"
-  s.files       = ["install.sh"]
+  s.executables = ["ec", "ec-proxy"]
+  s.files       = ["scripts/install.sh"]
 end

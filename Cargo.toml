@@ -1,7 +1,7 @@
 [package]
 name = "eclectica"
 license = "MIT"
-version = "0.0.2"
+version = "0.0.6"
 authors = ["Oleg Gaidarenko <markelog@gmail.com>"]
 repository = "https://github.com/markelog/eclectica"
 homepage = "https://github.com/markelog/eclectica#readme"
@@ -19,3 +19,6 @@ keywords = [
 
 [[bin]]
 name = "ec"
+
+[[bin]]
+name = "ec-proxy"

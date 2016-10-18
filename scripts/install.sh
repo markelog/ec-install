@@ -40,15 +40,22 @@ else
   DEST=/usr/local/bin
 fi
 
-DEST="$DEST/ec"
-URL="https://github.com/markelog/eclectica/releases/download/$VERSION/eclectica_$PLATFORM"
+DEST_MAIN="$DEST/ec"
+DEST_PROXY="$DEST/ec-proxy"
+MAIN="https://github.com/markelog/eclectica/releases/download/$VERSION/ec_$PLATFORM"
+PROXY="https://github.com/markelog/eclectica/releases/download/$VERSION/ec-proxy_$PLATFORM"
 
 if [ -z $VERSION ] ; then
   echo "Error requesting. Download binary from https://github.com/markelog/eclectica/releases"
   exit 1
 else
-  curl -L https://github.com/markelog/eclectica/releases/download/$VERSION/ec_$PLATFORM -o $DEST
-  chmod +x $DEST
+  echo "\nDownloading main binary\n"
+  curl -L $MAIN -o $DEST_MAIN
+
+  echo "\nDownloading proxy binary\n"
+  curl -L $PROXY -o $DEST_PROXY
+
+  chmod +x $DEST_MAIN $DEST_PROXY
 fi
 
 }

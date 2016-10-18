@@ -1,12 +1,13 @@
 {
   "name": "eclectica",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "Cool and eclectic version manager for any language",
   "scripts": {
-    "postinstall": "EC_DEST=$(npm bin -g) EC_VERSION=0.0.2 sh ./install.sh"
+    "postinstall": "EC_DEST=$(npm config get prefix)/bin EC_VERSION=0.0.6 ./scripts/install.sh"
   },
   "bin": {
-    "ec": "./bin/ec"
+    "ec": "./bin/ec",
+    "ec-proxy": "./bin/ec-proxy"
   },
   "preferGlobal": true,
   "repository": {
@@ -30,7 +31,7 @@
     "env",
     "environment"
   ],
-  "files": ["install.sh", "bin"],
+  "files": ["scripts/install.sh", "bin"],
   "author": "Oleg Gaidarenko <markelog@gmail.com>",
   "license": "MIT",
   "bugs": {

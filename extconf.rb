@@ -6,10 +6,12 @@ create_makefile ''
 
 bin = Gem.bindir()
 temp = Dir.tmpdir()
+ec = "#{temp}/ec"
+ec_proxy = "#{temp}/ec-proxy"
 
 # Place real binary in tmp path,
 # if we put to bin path immediately, install process will try to use a dummy one
-`EC_DEST=#{temp} EC_VERSION=0.0.2 sh install.sh`
+`EC_DEST=#{temp} EC_VERSION=0.0.6 sh scripts/install.sh`
 
 # Execute in subprocess so post install would think we are finished
 pid = fork do
@@ -21,7 +23,7 @@ pid = fork do
 
 	# Replace dummy bin with a real one
 	# "sleep" is need to give time for parent process to finish up
-	exec("sleep 2 && mv #{temp}/ec #{bin}")
+	exec("sleep 2 && mv #{ec} #{bin} && mv #{ec_proxy} #{bin}")
 end
 
 # Do it zombie style
