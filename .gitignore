@@ -1,3 +1,6 @@
 /eclectica-*
 /Cargo.lock
 /target
+/eclectica-*.gem
+/eclectica.egg-info
+/dist

@@ -1,5 +1,9 @@
-all: gem cargo npm
+all: clean gem cargo npm pip
 .PHONY: all
+
+clean:
+	@rm -rf eclectica-*.gem eclectica.egg-info dist
+.PHONY: clean
 
 cargo:
 	@echo "[+] publishing to crates.io"
@@ -17,3 +21,8 @@ npm:
 	@echo "[+] publishing to npm"
 	@npm publish
 .PHONY: npm
+
+pip:
+	@echo "[+] publishing to pypi"
+	@python setup.py sdist upload -r pypi
+.PHONY: pip
