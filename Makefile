@@ -1,8 +1,8 @@
-all: clean gem cargo npm pip
+all: clean gem npm pip cargo clean
 .PHONY: all
 
 clean:
-	@rm -rf eclectica-*.gem eclectica.egg-info dist
+	@rm -rf eclectica-*.gem eclectica.egg-info dist Cargo.lock target dist
 .PHONY: clean
 
 cargo:
