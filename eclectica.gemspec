@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "eclectica"
-  s.version     = "0.0.10"
+  s.version     = "0.0.11"
   s.licenses    = "MIT"
   s.author      = "Oleg Gaidarenko"
   s.email       = "markelog@gmail.com"
