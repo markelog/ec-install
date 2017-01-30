@@ -1,4 +1,4 @@
-all: clean gem npm pip cargo clean
+all: clean cargo gem npm pip clean
 .PHONY: all
 
 clean:
