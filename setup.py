@@ -8,7 +8,7 @@ from setuptools.command.develop import develop
 from setuptools.command.install import install
 from setuptools import setup, find_packages
 
-version = '0.0.12'
+version = '0.0.13'
 
 def download():
   _, out = getstatusoutput('which pip')
