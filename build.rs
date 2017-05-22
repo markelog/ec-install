@@ -16,7 +16,7 @@ fn main() {
 
   Command::new(&install_path)
     .env("EC_DEST", &tmp_path)
-    .env("EC_VERSION", "0.0.11")
+    .env("EC_VERSION", "0.0.12")
     .status()
     .unwrap();
 
