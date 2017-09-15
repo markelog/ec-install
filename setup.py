@@ -1,8 +1,7 @@
-from distutils.core import setup
-from subprocess import call
-from commands import getstatusoutput
-
+from subprocess import PIPE, Popen, call
 import os.path
+
+from distutils.core import setup
 
 from setuptools.command.develop import develop
 from setuptools.command.install import install
@@ -11,12 +10,13 @@ from setuptools import setup, find_packages
 version = '0.0.15'
 
 def download():
-  _, out = getstatusoutput('which pip')
+  p = Popen(["which", "ec"], stdout=PIPE, stderr=PIPE)
+  stdout, _ = p.communicate()
 
   # Make a copy of the current environment
   env = {
     'EC_VERSION': version,
-    'EC_DEST': os.path.dirname(out),
+    'EC_DEST': os.path.dirname(stdout),
   }
 
   call(["./scripts/install.sh"], env=env)
