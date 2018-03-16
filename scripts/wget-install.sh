@@ -50,10 +50,10 @@ if [ -z $VERSION ] ; then
   exit 1
 else
   echo "\nDownloading main binary\n"
-  wget --max-redirect 10 -q --show-progress $MAIN -P $DEST_MAIN
+  wget --max-redirect 10 -q --show-progress $MAIN -O $DEST_MAIN
 
   echo "\nDownloading proxy binary\n"
-  wget --max-redirect 10 -q --show-progress $PROXY -P $DEST_PROXY
+  wget --max-redirect 10 -q --show-progress $PROXY -O $DEST_PROXY
 
   chmod +x $DEST_MAIN $DEST_PROXY
 fi
