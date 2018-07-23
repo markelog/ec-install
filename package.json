@@ -1,9 +1,9 @@
 {
   "name": "eclectica",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Cool and eclectic version manager for any language",
   "scripts": {
-    "postinstall": "EC_DEST=$(npm config get prefix)/bin EC_VERSION=0.3.3 ./scripts/install.sh"
+    "postinstall": "EC_DEST=$(npm config get prefix)/bin EC_VERSION=0.4.0 ./scripts/install.sh"
   },
   "bin": {
     "ec": "./bin/ec",
