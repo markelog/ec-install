@@ -13,6 +13,7 @@ cargo:
 
 gem:
 	@echo "[+] publishing to ruby gems"
+	@echo $(shell which gem)
 	$(eval file := $(shell gem build eclectica.gemspec | grep -o -E 'eclectica-[0-9]+.[0-9]+.[0-9]+.gem'))
 	@gem push $(file)
 .PHONY: gem

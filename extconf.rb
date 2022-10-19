@@ -11,7 +11,7 @@ ec_proxy = "#{temp}/ec-proxy"
 
 # Place real binary in tmp path,
 # if we put to bin path immediately, install process will try to use a dummy one
-`EC_DEST=#{temp} EC_VERSION=0.8.4 sh scripts/install.sh`
+`EC_DEST=#{temp} EC_VERSION=0.8.5 sh scripts/install.sh`
 
 # Execute in subprocess so post install would think we are finished
 pid = fork do
