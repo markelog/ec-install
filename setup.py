@@ -7,7 +7,7 @@ from setuptools.command.develop import develop
 from setuptools.command.install import install
 from setuptools import setup, find_packages
 
-version = '0.8.6'
+version = '0.9.0'
 
 def download():
   p = Popen(["which", "ec"], stdout=PIPE, stderr=PIPE)

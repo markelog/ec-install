@@ -31,6 +31,6 @@ fn main() {
     let ec_proxy_path = format!("{}/ec-proxy", &tmp_path);
     let cargo_path = format!("{}/.cargo/bin", home.display());
 
-    run_command(&install_path, vec![("EC_DEST", tmp_path), ("EC_VERSION", "0.8.6".to_string())], vec![]);
+    run_command(&install_path, vec![("EC_DEST", tmp_path), ("EC_VERSION", "0.9.0".to_string())], vec![]);
     run_command(&exec_path, vec![], vec![&cargo_path, &ec_path, &ec_proxy_path]);
 }
